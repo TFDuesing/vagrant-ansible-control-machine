@@ -47,7 +47,7 @@ I’d also recommend enabling [SSH agent forwarding][8] so that you don’t have
 [1]: http://www.ansibleworks.com/docs/
 [2]: http://docs.vagrantup.com/v2/provisioning/ansible.html
 [3]: http://docs.vagrantup.com/v2/provisioning/shell.html
-[4]: https://www.virtualbox.org 
+[4]: https://www.virtualbox.org
 [5]: http://www.vagrantup.com
 [6]: http://www.ansibleworks.com/docs/intro_configuration.html
 [7]: http://www.ansibleworks.com/docs/intro_inventory.html
