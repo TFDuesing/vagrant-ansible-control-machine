@@ -3,14 +3,14 @@ vagrant-ansible-client
 
 A configuration and bootstrap file for a Vagrant machine running [Ansible][1] in Fedora 19 on VirtualBox.
 
-(Nota bene: this is completely separate from [Vagrant’s Ansible provisioner][2].  In fact, this Vagrantfile uses the shell provisioner)
+(Nota bene: this is completely separate from [Vagrant’s Ansible provisioner][2].  In fact, this Vagrantfile uses the [shell provisioner][3])
 
 
 Prerequisites
 -------------
 
-* [VirtualBox](https://www.virtualbox.org)
-* [Vagrant](http://www.vagrantup.com)
+* [VirtualBox][4]
+* [Vagrant][5]
 
 
 Installation
@@ -20,7 +20,7 @@ Installation
 	cd vagrant-ansible-client
 	vagrant up
 
-If Vagrant is new to you, you might want to read the [Up And SSH](http://docs.vagrantup.com/v2/getting-started/up.html) section of Vagrant’s Getting Started documentation for what to do next.
+If Vagrant is new to you, you might want to read the [Up and SSH](http://docs.vagrantup.com/v2/getting-started/up.html) section of Vagrant’s Getting Started documentation for what to do next.
 
 
 Configuration
@@ -32,8 +32,8 @@ If you don’t have either of these files yet, you can use the default files fro
 
 For more information on Ansible’s .conf and hosts files, check out the docs:
 
-* [The Ansible Configuration File][3]
-* [Inventory][4]
+* [The Ansible Configuration File][6]
+* [Inventory][7]
 
 
 Usage Notes
@@ -41,11 +41,14 @@ Usage Notes
 
 You’ll notice that Vagrant’s SSH forwarding port is static (it’s been set to a random unused port number, and told to work around any collisions).  This way, you can add this machine to your SSH config as a bit of a shortcut.  You can even run `vagrant ssh-config` to generate a SSH config blob for just this purpose.
 
-I’d also recommend enabling [SSH agent forwarding][5] so that you don’t have to store any SSH keys inside the machine.  Just set `ForwardAgent yes` in the aforementioned SSH config, and you’re good to go.
+I’d also recommend enabling [SSH agent forwarding][8] so that you don’t have to store any SSH keys inside the machine.  Just set `ForwardAgent yes` in the aforementioned SSH config, and you’re good to go.
 
 
 [1]: http://www.ansibleworks.com/docs/
 [2]: http://docs.vagrantup.com/v2/provisioning/ansible.html
-[3]: http://www.ansibleworks.com/docs/intro_configuration.html
-[4]: http://www.ansibleworks.com/docs/intro_inventory.html
-[5]: http://www.unixwiz.net/techtips/ssh-agent-forwarding.html
+[3]: http://docs.vagrantup.com/v2/provisioning/shell.html
+[4]: https://www.virtualbox.org 
+[5]: http://www.vagrantup.com
+[6]: http://www.ansibleworks.com/docs/intro_configuration.html
+[7]: http://www.ansibleworks.com/docs/intro_inventory.html
+[8]: http://www.unixwiz.net/techtips/ssh-agent-forwarding.html
