@@ -26,9 +26,9 @@ If Vagrant is new to you, you might want to read the [Up And SSH](http://docs.va
 Configuration
 -------------
 
-Copy or move your `ansibe.conf` and `hosts` files into the ansible directory inside your project directory (which is most likely this very directory).
+Copy or move your `ansibe.conf` and `hosts` files into the `ansible/` directory inside your project directory (which is most likely this very directory).
 
-If you don’t have either of these files yet, you can use the default files from Fedora’s ansible package as a starting point.  To do this, just copy the contents of `/etc/ansible/` to `/vagrant/` inside of the VM.
+If you don’t have either of these files yet, you can use the default files from Fedora’s ansible package as a starting point.  To do this, SSH in to the machine and copy the contents of `/etc/ansible/` to `/vagrant/`.
 
 For more information on Ansible’s .conf and hosts files, check out the docs:
 
@@ -39,10 +39,13 @@ For more information on Ansible’s .conf and hosts files, check out the docs:
 Usage Notes
 -----------
 
-You’ll notice that the SSH forwarding port is static (it’s been set to a random unused port number, and told to work around any collisions).  This way, you can add this machine to your SSH config as a bit of a shortcut.  You can even run `vagrant ssh-config` to generate a SSH config blob for just this purpose.
+You’ll notice that Vagrant’s SSH forwarding port is static (it’s been set to a random unused port number, and told to work around any collisions).  This way, you can add this machine to your SSH config as a bit of a shortcut.  You can even run `vagrant ssh-config` to generate a SSH config blob for just this purpose.
+
+I’d also recommend enabling [SSH agent forwarding][5] so that you don’t have to store any SSH keys inside the machine.  Just set `ForwardAgent yes` in the aforementioned SSH config, and you’re good to go.
 
 
 [1]: http://www.ansibleworks.com/docs/
 [2]: http://docs.vagrantup.com/v2/provisioning/ansible.html
 [3]: http://www.ansibleworks.com/docs/intro_configuration.html
 [4]: http://www.ansibleworks.com/docs/intro_inventory.html
+[5]: http://www.unixwiz.net/techtips/ssh-agent-forwarding.html
