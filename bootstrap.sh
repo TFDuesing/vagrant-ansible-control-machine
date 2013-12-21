@@ -17,6 +17,7 @@ echo ""
 # python-devel is required to build the (optional) C extension for simplejson
 /usr/bin/yum --assumeyes install python-pip python-devel
 
+
 echo ""
 echo "*************************************************************************"
 echo "  Installing Ansible and pyrax"
