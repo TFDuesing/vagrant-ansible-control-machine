@@ -1,42 +1,32 @@
-#!/usr/bin/env bash
-
-user="$1"
-user_dir="/home/$user"
-synced_dir="$2"
+#!/usr/bin/env sh
 
 
 echo ""
-echo "*************************************************************************"
+echo "********************************************************************************"
 echo "  Updating and Installing Prerequisite Packages"
-echo "*************************************************************************"
+echo "********************************************************************************"
 echo ""
 
-/usr/bin/yum --assumeyes update yum
-/usr/bin/yum --assumeyes --exclude=kernel* update
+yum --assumeyes update yum
+yum --assumeyes --exclude=kernel* update
 
 # python-devel is required to build the (optional) C extension for simplejson
-/usr/bin/yum --assumeyes install python-pip python-devel
+yum --assumeyes install python-pip python-devel
 
 
 echo ""
-echo "*************************************************************************"
+echo "********************************************************************************"
 echo "  Installing Ansible and pyrax"
-echo "*************************************************************************"
+echo "********************************************************************************"
 echo ""
 
-/usr/bin/yum --assumeyes install ansible
+yum --assumeyes install ansible
 
-/usr/bin/pip install pyrax
-
-# add symlink to ansible configuration directory
-if [ ! -d "/etc/ansible.original/" ]; then
-  mv /etc/ansible/ /etc/ansible.original/
-  /usr/bin/ln --symbolic $synced_dir/ansible/ /etc/
-fi
+pip install pyrax
 
 
 echo ""
-echo "*************************************************************************"
+echo "********************************************************************************"
 echo "  There.  Now we’re done."
-echo "*************************************************************************"
+echo "********************************************************************************"
 echo ""

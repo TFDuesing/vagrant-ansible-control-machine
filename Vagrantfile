@@ -10,10 +10,8 @@ Vagrant.configure("2") do |config|
     ansible.vm.provider "virtualbox" do |v|
       v.name = "Ansible"
     end
-    ansible.vm.provision :shell do |s|
-      s.path = "bootstrap.sh"
-      # assuming the values of config.ssh.default.username and config.vm.synced_folder for this box
-      s.args = "vagrant /vagrant"
-    end
+    ansible.vm.provision "shell", path: "./bootstrap.sh"
+    ansible.vm.synced_folder "./", "/vagrant", disabled: true
+    ansible.vm.synced_folder "ansible/", "/etc/ansible"
   end
 end
