@@ -1,7 +1,7 @@
 vagrant-ansible-client
 ======================
 
-A configuration and bootstrap file for a Vagrant machine running [Ansible][1] in Fedora 19 on VirtualBox.
+A configuration and bootstrap file for a Vagrant machine running [Ansible][1] in Fedora 20 on VirtualBox.
 
 (Nota bene: this is completely separate from [Vagrant’s Ansible provisioner][2].  In fact, this Vagrantfile uses the [shell provisioner][3])
 
