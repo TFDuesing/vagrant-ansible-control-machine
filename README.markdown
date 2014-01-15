@@ -1,5 +1,5 @@
-vagrant-ansible-client
-======================
+vagrant-ansible-control-machine
+===============================
 
 A configuration and bootstrap file for a Vagrant machine running [Ansible][1] in Fedora 20 on VirtualBox.
 
@@ -16,8 +16,8 @@ Prerequisites
 Installation
 ------------
 
-	git clone https://github.com/TFDuesing/vagrant-ansible-client.git
-	cd vagrant-ansible-client
+	git clone https://github.com/TFDuesing/vagrant-ansible-control-machine.git
+	cd vagrant-ansible-control-machine
 	vagrant up
 
 If Vagrant is new to you, you might want to read the [Up and SSH](http://docs.vagrantup.com/v2/getting-started/up.html) section of Vagrant’s Getting Started documentation for what to do next.
