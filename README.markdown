@@ -44,11 +44,11 @@ You’ll notice that Vagrant’s SSH forwarding port is static (it’s been set 
 I’d also recommend enabling [SSH agent forwarding][8] so that you don’t have to store any SSH keys inside the machine.  Just set `ForwardAgent yes` in the aforementioned SSH config, and you’re good to go.
 
 
-[1]: http://www.ansibleworks.com/docs/
+[1]: http://docs.ansible.com/
 [2]: http://docs.vagrantup.com/v2/provisioning/ansible.html
 [3]: http://docs.vagrantup.com/v2/provisioning/shell.html
 [4]: https://www.virtualbox.org
 [5]: http://www.vagrantup.com
-[6]: http://www.ansibleworks.com/docs/intro_configuration.html
-[7]: http://www.ansibleworks.com/docs/intro_inventory.html
+[6]: http://docs.ansible.com/intro_configuration.html
+[7]: http://docs.ansible.com/intro_inventory.html
 [8]: http://www.unixwiz.net/techtips/ssh-agent-forwarding.html
